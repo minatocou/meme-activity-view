@@ -1,0 +1,46 @@
+<div id="seckill" v-show="show" style="display: none">
+    <div class="tab">
+        <nav class="nav-date">
+            <div class="swiper-container nav1">
+                <div class="swiper-wrapper">
+                <span class="swiper-slide"
+                      v-for="(index,date) in tab.date"
+                      index=${index}
+                >${date}</span>
+                </div>
+            </div>
+            <span class="swiper-check"></span>
+        </nav>
+        <nav class="nav-time">
+            <div class=" block"
+                 v-for="(index,t) in activeTime"
+                 @tap="changeTime(index,$event)"
+                 :class="index==activeIndex[1]&&'active'"
+            >
+                <p>${t[0]}</p>
+                <p>${t[1]}</p>
+            </div>
+        </nav>
+    </div>
+    <div class="countdown " :class="durationInfo.class"  style="display: none;" v-show="show" align="center">
+        <span></span>
+        <span v-show="showTime">${secKillTime}</span>
+    </div>
+    <ul class="flash-list" v-show="showList" style="display: none;" :style="'height:'+listHeight+'px'">
+        <li v-for="pro in list" :class="durationInfo.class"  @tap="goDetail(pro)">
+            <img :src=pro.imgUrl alt="">
+            <div class="right">
+                <p class="ov2">
+                    ${pro.brandName}${pro.name}
+                </p>
+                <div class="bottom">
+                    <span class="price">${pro.secKillPrice}</span>
+                    <del>${pro.originPrice}</del>
+                    <p class="info">${durationInfo.startTime}</p>
+                    <span class="button"  :class="pro.seckillStock===false&&'disabled'"></span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--@tap="changeTime(index,$event)"-->

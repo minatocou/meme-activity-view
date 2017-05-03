@@ -1,0 +1,138 @@
+.newcomercomment {
+  overflow: hidden;
+  background: #f5f5f5;
+}
+.newcomercomment .n-tip {
+  width: 3.125rem;
+}
+.newcomercomment .product-detail {
+  background: #fff;
+  position: relative;
+  margin-bottom: 0.625rem;
+  padding: 0.3125rem;
+}
+.newcomercomment .product-detail .pa {
+  min-height: 10.625rem;
+  display: block;
+}
+.newcomercomment .product-detail .product-img {
+  width: 10rem;
+  position: absolute;
+  left: 0.3125rem;
+  top: 0.3125rem;
+  height: 10rem;
+}
+.newcomercomment .product-detail .product-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.newcomercomment .product-detail .product-show {
+  padding: 0.625rem 0.625rem 0.625rem 11.25rem;
+}
+.newcomercomment .product-detail .product-show .ov2 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  min-height: 2.25rem;
+  margin-top: 0.3125rem;
+  color: #333;
+  margin-bottom: 0.9375rem;
+}
+.newcomercomment .product-detail .product-show .price-box {
+  margin: 0.3125rem 0;
+}
+.newcomercomment .product-detail .product-show .price-box .current-price {
+  font-size: 1.125rem;
+  color: #ff5073;
+  display: inline-block;
+}
+.newcomercomment .product-detail .product-show .price-box .original-price {
+  font-size: 0.75rem;
+  color: #bbbbbb;
+  display: inline-block;
+  margin-left: 0.3125rem;
+}
+.newcomercomment .product-detail .product-show .see {
+  padding: 0.375rem 0.9375rem;
+  color: #fff;
+  background: #ff5073;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 0.8125rem;
+}
+.newcomercomment .comment-list {
+  height: 6.875rem;
+  background: #f5f5f5;
+  position: relative;
+  margin-bottom: 0.3125rem;
+}
+.newcomercomment .comment-list:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 0.625rem solid transparent;
+  border-right: 0.625rem solid transparent;
+  border-bottom: 0.625rem solid #eeeeee;
+  position: absolute;
+  left: 3.75rem;
+  top: -0.625rem;
+}
+.newcomercomment .comment-item {
+  width: 80%;
+  padding: 0.5rem 0.9375rem;
+  position: relative;
+}
+.newcomercomment .comment-item:after {
+  position: absolute;
+  content: "";
+  top: 1.125rem;
+  bottom: 1.125rem;
+  right: -0.0625rem;
+  background: #e0e0e0;
+  width: 0.0625rem;
+}
+.newcomercomment .comment-item .avatar {
+  width: 1.875rem;
+  height: 1.875rem;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.newcomercomment .comment-item .userName {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  color: #666666;
+  font-size: 0.875rem;
+}
+.newcomercomment .comment-item .content {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: #999999;
+}
+.newcomercomment .comment-item [class^=star] {
+  height: 0.6875rem;
+  background: url("../../../img/star.png") repeat-x;
+  width: 4.0625rem;
+  background-size: contain;
+  position: absolute;
+  right: 0.9375rem;
+  top: 1.125rem;
+}
+.newcomercomment .comment-item .star-1 {
+  width: 0.8125rem;
+}
+.newcomercomment .comment-item .star-2 {
+  width: 1.625rem;
+}
+.newcomercomment .comment-item .star-3 {
+  width: 2.4375rem;
+}
+.newcomercomment .comment-item .star-4 {
+  width: 3.25rem;
+}

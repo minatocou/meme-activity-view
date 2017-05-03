@@ -1,0 +1,1 @@
+require(["src/web/blend","src/web/dialog/alert","src/web/slider"],function(e,n,l){"use strict";e=e||{},e.dialog={},e.dialog.alert=n,e.component={},e.component.slider=l,window.Blend=e;var d=new CustomEvent("blendready",{bubbles:!0,cancelable:!0});document.dispatchEvent(d)},null,!0);

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    {{> pc/script}}
+    <title>{{#if config.root.title}}{{config.root.title}}{{else}}活动{{/if}}</title>
+    <link rel="icon" href="../../static/common/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../static/common/img/favicon.png" type="image/x-icon">
+    <link rel='stylesheet' href='../../static/css/src/render/pc.css'/>
+</head>
+<body style="{{#bgc config.root.bgColor}}{{/bgc}}" data-pis="{{config.serverConfig.pis}}" data-key="{{config.root.urlkey}}">
+<div class="render_container">
+    {{#each config.field}}
+        {{#is type "l1"}}
+            {{> pc/category}}
+        {{/is}}
+        {{#is type "img"}}
+            {{> pc/img}}
+        {{/is}}
+        {{#is type "video"}}
+            {{> pc/video}}
+        {{/is}}
+    {{/each}}
+</div>
+</body>
+<script type="text/javascript" src="{{config.serverConfig.majs}}"></script>
+<script src='../../static/vendor/jquery/jquery.js'></script>
+<script src='../../static/vendor/echojs/echo.js'></script>
+<script src='../../static/js/src/render/pc.js'></script>
+</html>

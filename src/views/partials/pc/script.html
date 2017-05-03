@@ -1,0 +1,30 @@
+<script>
+    var status = "{{config.status}}";
+
+    function paramOfUrl(url) {
+        url = url || window.location.href;
+        var paramSuit = url.substring(url.indexOf('?') + 1).split('&');
+        var paramObj = {};
+        for (var i = 0; i < paramSuit.length; i++) {
+            var param = paramSuit[i].split('=');
+            if (param.length == 2) {
+                var key = decodeURIComponent(param[0]);
+                var val = decodeURIComponent(param[1]);
+                if (paramObj.hasOwnProperty(key)) {
+                    if (!(paramObj[key] instanceof Array)) {
+                        paramObj[key] = [paramObj[key]]
+                    }
+                    paramObj[key].push( val);
+                } else {
+                    paramObj[key] = val;
+                }
+            }
+        }
+        return paramObj;
+    }
+    var preview = parseInt(paramOfUrl(window.location.href).preview || 0);
+
+    if( !preview && !parseInt(status)  ){
+        window.location="{{config.serverConfig.mproduct}}";
+    }
+</script>

@@ -1,0 +1,43 @@
+@import "variables";
+.newcomercoupon{
+  padding: 15*@xem;
+  ul{
+    font-size: 0;
+    li{
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14*@xem;
+      position: relative;
+      img{
+        width: 100%;
+        vertical-align: top;
+      }
+      &.over{
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        &:after{
+          content: "";
+          background: url("../../../img/over.png") no-repeat right bottom;
+          height: 100%;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 40%;
+          background-size: contain;
+        }
+      }
+    }
+  }
+  .getCouponBtn{
+    width: 100%;
+    padding: 12*@xem 0;
+    background: @mainColor;
+    text-align: center;
+    color: #fff;
+    border-radius: 4*@xem;
+    &.over{
+      background: #ccc;
+    }
+  }
+}

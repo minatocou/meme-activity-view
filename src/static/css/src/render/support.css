@@ -1,0 +1,67 @@
+.support {
+  display: none;
+  width: 100%;
+  padding: 0 0.625rem;
+}
+.support .container {
+  background: #fff;
+  padding: 0 0.5625rem;
+}
+.support .container .gift,
+.support .container .look {
+  position: relative;
+  display: inline-block;
+  line-height: 2.1875rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+.support .look {
+  min-width: 4.6875rem;
+}
+.support .look img {
+  width: 1.375rem;
+}
+.support .gift {
+  z-index: 10;
+}
+.support .gift img {
+  position: relative;
+  z-index: 10;
+  width: 1.25rem;
+}
+.support .gift .h {
+  display: none;
+}
+.support .gift-h .n {
+  display: none;
+}
+.support .gift-h .h {
+  display: inline-block;
+}
+.support img {
+  margin-right: 0.3125rem;
+}
+.support .text,
+.support img {
+  vertical-align: middle;
+}
+.support .gift-box {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+}
+.support .gift-box img {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  max-width: 1.875rem;
+  opacity: 0;
+  z-index: 10000;
+}
+.support .gift-box .show-gift {
+  opacity: 1;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}

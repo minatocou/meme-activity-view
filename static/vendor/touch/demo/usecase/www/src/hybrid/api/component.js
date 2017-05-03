@@ -1,0 +1,1 @@
+define(function(e){var n={};return n.slider=e("./component/slider"),n});

@@ -1,0 +1,63 @@
+{{#if groupImg}}
+<li class="groupImg col-{{column}}">
+    <a class="groupImg-link" style="display: none;" href="{{#if groupImgUrl}}{{groupImgUrl}}{{else}}javascript:void(0);{{/if}}"><img src="/activity/common/img/default.png" data-echo="{{groupImg}}"></a>
+</li>
+{{/if}}
+
+{{#if proNum}}
+{{#each data.product}}
+{{#lt @index ../proNum}}
+<li class="col-{{../../column}}">
+    <div class="product friday"  data-id="{{productId}}">
+        <div class="pro_img">
+            <a href="{{#mlink productId}}{{/mlink}}"><img data-echo="{{#imgCat ../../column imgPc img_400}}{{/imgCat}}" src="/activity/common/img/default.png"></a>
+
+        </div>
+        <div class="pro_info">
+            <p class="ov2"><a href="{{#mlink productId}}{{/mlink}}">[{{brand}}]{{name}}</a></p>
+            <div class="pro-shop">
+                <div class="price">
+                    <div class="cat-label">
+                        <img src="{{../../catLabel}}" alt="">
+                        <div class="vhr"></div>
+                    </div>
+                    <strong class="special-price hide">¥<span></span></strong>
+                    <div class="vhr hide"></div>
+                    <em class="changeColor">¥<span>{{price}}</span></em>
+                    <del>¥<span>{{originPrice}}</span></del>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+{{/lt}}
+{{/each}}
+{{else}}
+{{#each data.product}}
+<li class="col-{{../column}}">
+    <div class="product friday"  data-id="{{productId}}">
+        <div class="pro_img">
+            <a href="{{#mlink productId}}{{/mlink}}"><img data-echo="{{#imgCat ../../column imgPc img_400}}{{/imgCat}}" src="/activity/common/img/default.png"></a>
+        </div>
+        <div class="pro_info">
+            <p class="ov2"><a href="{{#mlink productId}}{{/mlink}}">[{{brand}}]{{name}}</a></p>
+            <div class="pro-shop">
+                <div class="price">
+                    <div class="cat-label">
+                        <img src="{{../../catLabel}}" alt="">
+                        <div class="vhr"></div>
+                    </div>
+                    <strong class="special-price hide">
+                        ¥<span></span>
+
+                    </strong>
+
+                    <em class="changeColor">¥<span>{{price}}</span></em>
+                    <del>¥<span>{{originPrice}}</span></del>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+{{/each}}
+{{/if}}

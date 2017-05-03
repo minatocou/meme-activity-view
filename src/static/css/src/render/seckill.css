@@ -1,0 +1,194 @@
+::-webkit-scrollbar {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+#seckill nav {
+  width: 100%;
+  background: #3a4047;
+}
+#seckill nav:first-child {
+  top: 0;
+  height: 2.5rem;
+}
+#seckill nav:last-child {
+  top: 2.5rem;
+}
+#seckill nav .swiper-container {
+  color: #999;
+  font-size: 14px;
+}
+#seckill nav .swiper-container .swiper-slide-active {
+  color: #fff;
+}
+#seckill nav .swiper-container .swiper-slide-active p {
+  color: #fff;
+}
+#seckill nav .swiper-slide {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  background: transparent;
+  font-size: 0.75rem;
+  color: #999;
+}
+#seckill nav .swiper-check {
+  position: absolute;
+  background: #31363c;
+  top: 0;
+  height: 2.5rem;
+  width: 20%;
+  left: 40%;
+}
+#seckill .nav-time {
+  width: 100%;
+  background: #f7f7f7;
+  overflow: scroll;
+  white-space: nowrap;
+}
+#seckill .nav-time .block {
+  width: 20%;
+  display: inline-block;
+  padding: 0.3125rem 0;
+}
+#seckill .nav-time .block p {
+  margin: 0;
+  text-align: center;
+  color: #999;
+}
+#seckill .nav-time .block p:first-child {
+  margin-bottom: 0.3125rem;
+  font-size: 1rem;
+}
+#seckill .nav-time .block p:last-child {
+  font-size: 0.75rem;
+}
+#seckill .nav-time .active {
+  background: #ff5073;
+}
+#seckill .nav-time .active p {
+  color: #fff;
+}
+#seckill .tab {
+  position: relative;
+  z-index: 3;
+  height: 5.625rem;
+}
+#seckill .countdown {
+  position: relative;
+  padding: 0.9375rem 0;
+  height: 3.125rem;
+}
+#seckill .countdown.no-start span:first-child:before {
+  content: "距离活动开始：";
+}
+#seckill .countdown.end span:first-child:before {
+  content: "活动已结束";
+}
+#seckill .countdown.end span:last-child {
+  display: none;
+}
+#seckill .countdown.start span:first-child:before {
+  content: "本场还剩：";
+}
+#seckill .countdown span {
+  display: inline-block;
+  vertical-align: middle;
+}
+#seckill .countdown span:first-child {
+  color: #999;
+  font-size: 0.75rem;
+}
+#seckill .countdown span:last-child {
+  color: #333;
+  font-size: 0.875rem;
+}
+#seckill .flash-list {
+  background: #fff;
+}
+#seckill .flash-list li {
+  padding: 0.25rem 0.9375rem 0.25rem 0.3125rem;
+  border-bottom: 0.3125rem solid #F5F5F5;
+  overflow: hidden;
+}
+#seckill .flash-list .ov2 {
+  font-size: 0.8125rem;
+}
+#seckill .flash-list p {
+  color: #333;
+  font-size: 0.75rem;
+}
+#seckill .flash-list img {
+  float: left;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+#seckill .flash-list .right {
+  position: relative;
+  padding-top: 0.875rem;
+  margin-left: 8.125rem;
+  height: 7.5rem;
+}
+#seckill .flash-list .bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0.9375rem;
+}
+#seckill .flash-list .bottom p {
+  display: none;
+  font-size: 0.75rem;
+  color: #feb11c;
+  margin: 0.3125rem 0 0;
+}
+#seckill .flash-list .bottom p:after {
+  content: " 准时开抢";
+}
+#seckill .flash-list del {
+  font-size: 0.75rem;
+  color: #bbb;
+}
+#seckill .flash-list del:before {
+  content: "¥";
+}
+#seckill .flash-list .price {
+  font-size: 1.125rem;
+  color: #ff5073;
+}
+#seckill .flash-list .price:before {
+  content: "¥";
+}
+#seckill .flash-list .button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #ff5073;
+  font-size: 0.8125rem;
+  color: #fff;
+  border-radius: 0.25rem;
+  line-height: 1.5625rem;
+  height: 1.5625rem;
+  width: 4.375rem;
+  text-align: center;
+}
+#seckill .flash-list .button:before {
+  content: "马上抢";
+}
+#seckill .flash-list .disabled {
+  background: #ccc;
+}
+#seckill .flash-list .disabled:before {
+  content: "抢光了";
+}
+#seckill .flash-list .no-start .info {
+  display: block;
+}
+#seckill .flash-list .no-start .button:before {
+  content: "去看看";
+}
+#seckill .flash-list .end .button {
+  background: #ccc;
+}
+#seckill .flash-list .end .button:before {
+  content: "已结束";
+}

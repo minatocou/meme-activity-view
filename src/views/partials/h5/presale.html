@@ -1,0 +1,95 @@
+{{#if data.list}}
+<div class="presale" data-start="{{data.startTime}}" data-end="{{data.endTime}}" >
+    <div class="countdown" data-from="{{multiply data.startTime  1000}}" data-to="{{multiply data.endTime 1000}}">
+        <div class="time-box" id="time-box"  align="center">
+            <p>距离活动<span class="active-started-text ">结束</span><span class="active-not-text">开始</span>还有</p>
+            <div class="left-time">
+                <div class="day">
+                    <div class="card">
+                        <span>0</span>
+                    </div>
+                    <div class="card">
+                        <span>0</span>
+                    </div>
+                    <span>天</span>
+                </div>
+                <div class="hour">
+                    <div class="card">
+                        <span>0</span>
+                    </div>
+                    <div class="card">
+                        <span>0</span>
+                    </div>
+                    <span>时</span>
+                </div>
+                <div class="minute">
+                    <div class="card">
+                        <span>0</span>
+                    </div>
+                    <div class="card">
+                        <span>0</span>
+                    </div>
+                    <span>分</span>
+                </div>
+                <div class="second">
+                    <div class="card">
+                        <span>0</span>
+                    </div>
+                    <div class="card">
+                        <span>0</span>
+                    </div>
+                    <span>秒</span>
+                </div>
+            </div>
+        </div>
+        <div class="preover">
+            预售已结束
+        </div>
+        <a>查看预售须知 ></a>
+    </div>
+    <ul>
+        {{#each data.list}}
+        <li class="pre-item not-over presaleProLi" data-id="{{productId}}">
+            <a href="{{#mlink productId }}{{/mlink}}"
+               data-href="{{#mlink productId }}{{/mlink}}"
+               data-id="{{productId}}"
+               class="presalePro"
+            >
+                <div class="product-img">
+                    <img data-echo="{{imgUrl}}">
+                    <div class="nostart">未开始</div>
+                </div>
+                <div class="product-info">
+                    <h2 class="ov2">[{{brandName}}] {{name}}</h2>
+                    <div class="product-priceBox">
+                        <div class="double11-price">
+                            <span class="double11-tag"><img src="{{../data.festivalImg}}"></span>
+                            <span class="ls-double11-price">￥{{toFloat specialPrice}}</span>
+                        </div>
+                        <div class="pre-price">
+                            <span class="pre-tag">预售价</span>
+                            <div>
+                                <span class="ls-current-price">￥{{toFloat prePrice}}</span>
+                                <del class="ls-original-price">￥{{toFloat originPrice}}</del>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="product-foot">预付定金￥{{toFloat deposit}}</span>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+    <div class="mask">
+        <div class="hide-mask"></div>
+        <p style="display: none">
+            {{data.description}}
+        </p>
+        <div class="box" align="center">
+            <h4>预售须知</h4>
+            <div class="content"></div>
+            <span>知道啦</span>
+        </div>
+    </div>
+</div>
+{{/if}}

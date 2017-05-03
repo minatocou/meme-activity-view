@@ -1,0 +1,35 @@
+<div class="recommend-comment-list" style="background-color: {{commentBgColor}};" data-interval = "{{timeInterval}}000">
+	{{#each data}}
+	<div class="recommend-comment {{#compare @index '==' 0}}active{{/compare}}" >
+		<div class="comment-info-wrap">
+			<div class="comment-product-img">
+				<img src="{{img}}" alt="">
+			</div>
+			<div class="comment-content">
+				<div class="comment-content-text multiple-line-ellipsis">
+					{{text}}
+				</div>
+				<div class="meme-comment-info">
+					<div class="meme-star">
+						<!-- <span class="meme-star-label">评价星级：</span> -->
+						<div class="meme-star-level 
+						{{#compare star '==' 1}}one-star{{/compare}} 
+						{{#compare star '==' 2}}two-star{{/compare}} 
+						{{#compare star '==' 3}}three-star{{/compare}} 
+						{{#compare star '==' 4}}four-star{{/compare}} 
+						{{#compare star '==' 5}}five-star{{/compare}}">&nbsp;
+						</div>
+					</div>
+					<div class="meme-user text-ellipsis">
+						<!-- <span class="meme-user-label">蜜米昵称：</span> -->
+						{{userName}}
+					</div>
+					<div class="meme-comment-date text-ellipsis">
+						{{date}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</div>

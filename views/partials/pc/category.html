@@ -1,0 +1,48 @@
+<div class="list">
+    <ul class="ul-content">
+        {{#if groupImg}}
+        <li class="groupImg col-{{column}}">
+            <a class="groupImg-link" style="display: none;" href="{{#if groupImgUrl}}{{groupImgUrl}}{{else}}javascript:void(0);{{/if}}"><img data-echo="{{groupImg}}" src="/activity/common/img/default.png"></a>
+        </li>
+        {{/if}}
+        {{#if proNum}}
+        {{#each data.product}}
+        {{#lt @index ../proNum}}
+        <li class="col-{{../../column}}">
+            <div class="product"  data-id="{{productId}}">
+                <div class="pro_img">
+                    <a href="{{#link productId}}{{/link}}"><img data-echo="{{imgPc}}" src="/activity/common/img/default.png"></a>
+
+                </div>
+                <div class="pro_info">
+                    <p class="ov2"><a href="{{#link productId}}{{/link}}">{{brand}} <br>{{name}}</a></p>
+                    <div class="pro-shop">
+                        <div class="price"><del>原价:{{originPrice}}</del><br><em>美美价:{{price}}</em></div>
+                        <a href="{{#link productId}}{{/link}}">GO ></a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {{/lt}}
+        {{/each}}
+        {{else}}
+        {{#each data.product}}
+        <li class="col-{{../column}}">
+            <div class="product"  data-id="{{productId}}">
+                <div class="pro_img">
+                    <a href="{{#link productId}}{{/link}}"><img data-echo="{{imgPc}}" src="/activity/common/img/default.png"></a>
+                </div>
+                <div class="pro_info">
+                    <p class="ov2"><a href="{{#link productId}}{{/link}}">{{brand}} <br>{{name}}</a></p>
+                    <div class="pro-shop">
+                        <div class="price"><del>原价:{{originPrice}}</del><br><em>美美价:{{price}}</em></div>
+                        <a href="{{#link productId}}{{/link}}">GO ></a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+        {{/if}}
+
+    </ul>
+</div>

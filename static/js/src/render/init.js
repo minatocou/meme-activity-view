@@ -1,0 +1,1 @@
+$(function(){FastClick.attach(document.body),echo.init({offset:300,throttle:0,debounce:!1,unload:!1,callback:function(){}});!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?d303aeebc00e96434b3bcf04b88d8666";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()});

@@ -1,0 +1,65 @@
+<script type="text/html" id="flashTpl">
+    <div class="pro-box">
+        <ul>
+            ${each data as v i}
+            <li class="flash-li" >
+                <div class="flash-product" data-id="${v.productId}" >
+                    <a href="${v.productId | mlink : label}" class="ahref">
+                        <img  alt="" src="/activity/common/img/default.png" data-echo="${v.imgUrl}">
+                    </a>
+                    <div class="info">
+                        <p class="ov2"><a href="${v.productId | mlink : label}" class="ahref"></a>[${v.brandName}]${v.name}</p>
+                        <div class="price-box">
+                            <span class="special-tag">超特价</span>
+                                                        <span class="price">
+                                                            <del>${v.originPrice}</del><em>￥${v.price}</em>
+                                                        </span>
+                        </div>
+                    </div>
+                    ${if label == 0} <div class="no-start">未开始</div> ${/if}
+                    ${if label == 2} <div class="stack-over">已结束</div> ${/if}
+                </div>
+            </li>
+            ${/each}
+        </ul>
+
+    </div>
+
+</script>
+<div class="flashsale">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {{#each tabInfo}}
+            <div class="swiper-slide {{#compare @index '==' 0}}swiper-active{{/compare}}" data-id="{{id}}" >
+                <div class="catTimeBox">
+                    <div class="date-day" {{#if ../topColor}}style="background:{{../../topColor}}"{{/if}}>
+                        {{#format date 'MM月DD日'}}{{/format}}
+                    </div>
+
+                    <ul class="time-list" {{#if ../flashColor}}style="background:{{../../flashColor}}"{{/if}}>
+                        {{#each catTime}}
+                        <li class="timeli timeli-{{../catTime.length}}" data-date="{{../date}}" data-category="{{category}}" data-to="{{to}}" data-from="{{time}}"  {{#if ../../tabActiveColor}}data-active="{{../../../tabActiveColor}}"{{/if}}
+                            {{#if ../../tabColor}}data-tab="{{../../../tabColor}}"  style="background:{{../../../tabColor}}"{{/if}}>
+                                <span class="day">{{time}} <br>
+                                    <span class="flash-label"></span>
+                                </span>
+                            <div class="time-content"  {{#if ../../flashColor}}style="background:{{../../../flashColor}}"{{/if}} {{#unless ../../isShowTr}}style="margin:0"{{/unless}}>
+
+                            </div>
+
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{#if ../isShowTr}}
+                    <div class="leftTr" ></div>
+                    <div class="rightTr"></div>
+                    {{/if}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="flash-button-prev"></div>
+        <div class="flash-button-next"></div>
+    </div>
+
+</div>

@@ -1,0 +1,68 @@
+@import "variables";
+.support{
+  display: none;
+  width: 100%;
+  padding:0 10*@xem;
+  .container{
+    background: #fff;
+    padding: 0 9*@xem;
+    .gift,.look{
+      position: relative;
+      display: inline-block;
+      line-height: 35*@xem;
+      font-size: 12*@xem;
+      color:#666;
+    }
+  }
+  .look{
+    min-width: 75*@xem;
+    img{
+      width: 22*@xem;
+    }
+  }
+  .gift{
+    z-index: 10;
+    img{
+      position: relative;
+      z-index: 10;
+      width: 20*@xem;
+    }
+    .h{
+      display: none;
+    }
+  }
+  .gift-h{
+    .n{
+      display: none;
+    }
+    .h{
+      display: inline-block;
+    }
+  }
+  img{
+    margin-right: 5*@xem;
+  }
+  .text,img{
+    vertical-align: middle;
+  }
+  .gift-box{
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    bottom:0;
+    height: 80px;
+    img{
+      position: absolute;
+      left: 0;
+      bottom:5px;
+      max-width: 30*@xem;
+      opacity: 0;
+      z-index: 10000;
+    }
+    .show-gift{
+      opacity: 1;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+  }
+}

@@ -1,0 +1,141 @@
+@import "variables";
+
+.outer-wrap {
+  height: 42px;
+}
+
+#nav-wrap {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 19;
+}
+
+#newWrap {
+  overflow: hidden;
+}
+
+.nav-outer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+}
+
+.nav-inner {
+  height: 42px;
+  width: 1500px;
+  position: relative;
+}
+
+.nav-item {
+  padding: 0 10px;
+  line-height: 42px;
+  font-size: 14px;
+  float: left;
+  display: block;
+  color: #333;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navShort {
+  width: ~'calc(100% - 45px)';
+  .nav-item{
+    text-align: center;
+  }
+}
+
+.nav-item-selected {
+  color: @mainColor;
+}
+
+.nav-bottom-line {
+  display: none;
+  background: #FE4070;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: .125rem;
+  border-radius: .125rem .125rem 0 0;
+  transition: left .15s ease-in-out, width .15s ease-in-out;
+  -webkit-transition: left .15s ease-in-out, width .15s ease-in-out;
+  -moz-transition: left .15s ease-in-out, width .15s ease-in-out;
+}
+
+.stab-pop {
+  display: none;
+  background: #fff;
+  background: rgba(0, 0, 0, .3);
+  color: #282222;
+  width: 100%;
+  z-index: 20;
+  height: 900*@xem;
+  ul {
+    max-height: 300px;
+    overflow-y: auto;
+    zoom: 1;
+    width: 100%;
+    background: rgba(255, 255, 255, .9);
+    float: left;
+    text-align: left;
+    font-size: 0;
+    li {
+      height: 42px;
+      padding: 0 8px;
+      font-size: 14px;
+      line-height: 42px;
+      min-width: 3.125rem;
+      vertical-align: top;
+      color: #666;
+      list-style: none;
+      width: 33%;
+      float: left;
+      text-align: center;
+    }
+    .liOn {
+      color: @mainColor;
+    }
+  }
+}
+
+.stab-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  font-size: 0;
+  line-height: 0;
+  background: rgba(255, 255, 255, .95);
+  width: 40px;
+  height: 42px;
+  &:before {
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 6px;
+    z-index: 20;
+    background: url(../../../img/shbg.png) no-repeat left center;
+    background-size: cover;
+    content: "";
+    height: 100%;
+  }
+  i {
+    display: block;
+    background: url(../../../img/arrowbg.png) center center no-repeat;
+    background-size: 100%;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    width: 18px;
+    height: 18px;
+    margin: 12px auto 0;
+    &.rotate180 {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+    }
+  }
+}
+
+.no-move {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+}

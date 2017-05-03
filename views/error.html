@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>Title</title>
+    <link rel='stylesheet' href="/activity/css/src/error.css" />
+</head>
+<body>
+
+<div class="error-container">
+    <p class="error">{{status}}</p>
+
+    <div class="content">
+        <h2>{{message}}</h2>
+
+        <p class="text">
+            Oooooops… 很抱歉,您要访问的页面不存在！{{#if preview}}可能活动已关闭，{{/if}}请返回首页
+        </p>
+
+        <p class="links">
+            <a id="button" href="javascript:void(0);">返回首页</a>
+        </p>
+    </div>
+</div>
+
+
+
+</body>
+</html>

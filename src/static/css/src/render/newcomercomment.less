@@ -1,0 +1,139 @@
+@import "variables";
+.newcomercomment{
+  overflow: hidden;
+  background: #f5f5f5;
+  .n-tip{
+    width: 50*@xem;
+  }
+  .product-detail{
+    background: #fff;
+    position: relative;
+    margin-bottom: 10*@xem;
+    padding: 5*@xem;
+    .pa{
+      min-height: 170*@xem;
+      display: block;
+    }
+    .product-img{
+      width: 160*@xem;
+      position: absolute;
+      left: 5*@xem;
+      top: 5*@xem;
+      height: 160*@xem;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .product-show{
+      padding: 10*@xem 10*@xem 10*@xem 180*@xem;
+      .ov2{
+        font-size: 14*@xem;
+        line-height: 18*@xem;
+        min-height: 36*@xem;
+        margin-top: 5*@xem;
+        color: @title;
+        margin-bottom: 15*@xem;
+      }
+      .price-box{
+        margin: 5*@xem 0;
+        .current-price{
+          font-size: 18*@xem;
+          color: @mainColor;
+          display: inline-block;
+        }
+        .original-price{
+          font-size: 12*@xem;
+          color: #bbbbbb;
+          display: inline-block;
+          margin-left: 5*@xem;
+        }
+      }
+      .see{
+        padding: 6*@xem 15*@xem;
+        color: #fff;
+        background: @mainColor;
+        border-radius: 4*@xem;
+        display: inline-block;
+        font-size: 13*@xem;
+      }
+    }
+  }
+  .comment-list{
+    height:110*@xem;
+    background: #f5f5f5;
+    position: relative;
+    margin-bottom: 5*@xem;
+    &:before{
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 10*@xem solid transparent;
+      border-right: 10*@xem solid transparent;
+      border-bottom: 10*@xem solid #eeeeee;
+      position: absolute;
+      left: 60*@xem;
+      top: -10*@xem;
+    }
+  }
+  .comment-item{
+    width: 80%;
+    padding: 8*@xem 15*@xem;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: "";
+      top: 18*@xem;
+      bottom: 18*@xem;
+      right: -1*@xem;
+      background: #e0e0e0;
+      width: 1*@xem;
+    }
+    .avatar{
+      width: 30*@xem;
+      height: 30*@xem;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+    .userName{
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8*@xem;
+      color: #666666;
+      font-size: 14*@xem;
+    }
+    .content{
+      margin-top: 8*@xem;
+      font-size: 12*@xem;
+      line-height: 18*@xem;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      color: #999999;
+    }
+    [class^=star]{
+      height: 11*@xem;
+      background: url("../../../img/star.png") repeat-x;
+      width: 65*@xem;
+      background-size: contain;
+      position: absolute;
+      right: 15*@xem;
+      top: 18*@xem;
+    }
+    .star-1{
+      width: 13*@xem;
+    }
+    .star-2{
+      width: 26*@xem;
+    }
+    .star-3{
+      width: 39*@xem;
+    }
+    .star-4{
+      width: 52*@xem;
+    }
+  }
+}

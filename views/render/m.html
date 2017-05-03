@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta name="format-detection" content="telephone=no"/>
+
+
+    <title>{{#if config.root.title}}{{config.root.title}}{{else}}活动{{/if}}</title>
+    {{> h5/script}}
+    <link rel="icon" href="/activity/common/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/activity/common/img/favicon.png" type="image/x-icon">
+
+
+    <link rel='stylesheet' href="/activity/css/build/src/views/render/m.css?t=1492165968594" />
+</head>
+<body style="{{#bgc config.root.bgColor}}{{/bgc}}"
+      data-pis="{{config.serverConfig.pis}}" data-key="{{config.root.urlkey}}" data-now="{{config.root.now}}"
+      data-solr="{{config.serverConfig.solr}}" data-pc="{{config.serverConfig.product}}"
+      data-m="{{config.serverConfig.mproduct}}">
+<div class="render_container">
+    {{#each config.field}}
+    {{#is type "l1"}}
+    {{> h5/category}}
+    {{/is}}
+    {{#is type "img"}}
+    {{> h5/img}}
+    {{/is}}
+    {{#is type "purchase"}}
+    {{> h5/purchase}}
+    {{/is}}
+    {{#is type "flashsale"}}
+    {{> h5/flashsale}}
+    {{/is}}
+    {{#is type "anchor"}}
+    {{> h5/anchor}}
+    {{/is}}
+    {{#is type "countdown"}}
+    {{> h5/countdown}}
+    {{/is}}
+    {{#is type "video"}}
+    {{> h5/video}}
+    {{/is}}
+    {{#is type "benefits"}}
+    {{> h5/benefits}}
+    {{/is}}
+    {{#is type "win"}}
+    {{> h5/win}}
+    {{/is}}
+    {{#is type "presale"}}
+    {{> h5/presale}}
+    {{/is}}
+    {{#is type "groupon"}}
+    {{> h5/groupon}}
+    {{/is}}
+    {{#is type "comment"}}
+    {{> h5/comment}}
+    {{/is}}
+    {{#is type "live"}}
+    {{> h5/live}}
+    {{/is}}
+    {{#is type "support"}}
+    {{> h5/support}}
+    {{/is}}
+    {{#is type "newcomercomment"}}
+    {{> h5/newcomercomment}}
+
+    {{/is}}
+    {{#is type "newcomer"}}
+    {{> h5/newcomer}}
+    {{/is}}
+
+    {{#is type "topnav"}}
+    {{> h5/topnav}}
+    {{/is}}
+
+    {{#is type "seckill"}}
+    {{> h5/seckill}}
+    {{/is}}
+
+    {{#is type "newcomercoupon"}}
+    {{> h5/newcomercoupon}}
+    {{/is}}
+
+    {{/each}}
+</div>
+{{> h5/dialog}}
+<!--<script type="text/javascript" src="../../static/vendor/vconsole/vconsole.min.js"></script>-->
+
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="{{config.serverConfig.majs}}"></script>
+<script src="/activity/js/build/src/views/render/m.js?t=1492165968594"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+define(function(n){var e={},t=n("./lib/lang"),i=n("./lib/string"),r=8785925;return e.getUniqueID=function(n){return n=n||"BlendUI",n+r++},t.extend(e,t),t.extend(e,i),e});

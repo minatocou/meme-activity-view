@@ -1,0 +1,27 @@
+<script type="text/html" id="winTpl">
+    ${each items as v i}
+    <div class="win-wrapper ${if i}hide ${/if}">
+        <div class="iblock">
+            <img src="/activity/img/gift.png" class="win-gift">
+        </div>
+        <div class="iblock">
+            <div><span class="gx">恭喜${v.name}</span><span class="win-mo">&nbsp;${v.mobile}</span></div>
+            <div class="wio">获得了${v.gift}</div>
+        </div>
+        <div class="win-close">
+            <img src="/activity/img/icon_close.png" alt="">
+        </div>
+    </div>
+    ${/each}
+</script>
+<div class="win-type " data-url="{{redirectUrl}}" >
+    {{#each winInfo}}
+    <div class="win-opt" data-csv='{{#json csv}}{{/json}}' data-from="{{from}}" data-to="{{to}}">
+
+    </div>
+    {{/each}}
+
+</div>
+<div class="win-hook hide">
+    <img src="/activity/img/gift.png" alt=""/>
+</div>

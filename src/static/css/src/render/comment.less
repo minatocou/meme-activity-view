@@ -1,0 +1,136 @@
+@import "variables";
+.recommend-comment { 
+	&-list {
+		position: relative;
+		overflow: hidden;
+	}
+	& {
+		float: left;
+		width: 100%;
+		transition: transform .3s ease 0s;
+		transform: translateX(-100%);
+		overflow: hidden;
+		float: left;
+		font-size: 13*@xem;
+		border: 10*@xem solid transparent;
+	}
+	&.active {
+		transform: translateX(0);
+	}
+	+ .recommend-comment{
+		margin-left: -100%;
+	}
+	&.active ~ .recommend-comment{
+		transform: translateX(100%);
+	}
+	&:first-child.active ~ .recommend-comment{
+		opacity: 0;
+	}
+	.meme-user {
+		float: left;
+		width: 50%;
+		padding-right: 8*@xem;
+	}
+	.meme-comment-date {
+		padding-right: 8*@xem;
+		text-align: right;
+	}
+
+	.meme-star-level {
+		overflow: hidden;
+		background: url(../../../img/comment_star.png) no-repeat left -1000px;
+		background-size: auto 6.5em;
+		&.one-star {
+			background-position-y: 3px;
+		}
+		&.two-star {
+			background-position-y: -14px;
+		}
+		&.three-star {
+			background-position-y: -31px;
+		}
+		&.four-star {
+			background-position-y: -47px;
+		}
+		&.five-star {
+			background-position-y: -64px;
+		}
+		@media (min-width: 360px){
+			&.two-star {
+				background-position-y: -16px;
+			}
+			&.three-star {
+				background-position-y: -34px;
+			}
+			&.four-star {
+				background-position-y: -52px;
+			}
+			&.five-star {
+				background-position-y: -70px;
+			}
+		}
+		@media (min-width: 414px){
+			&.two-star {
+				background-position-y: -17px;
+			}
+			&.three-star {
+				background-position-y: -36px;
+			}
+			&.four-star {
+				background-position-y: -56px;
+			}
+			&.five-star {
+				background-position-y: -76px;
+			}
+		}
+	}
+	.comment-info-wrap {
+		display: table;
+		width: 100%;
+		/*background-color: #fff;*/
+	}
+	.comment-product-img {
+		display: table-cell;
+		width: 124*@xem;
+		min-width: 124*@xem;
+		height: 124*@xem;
+		margin-top: 6*@xem;
+		img {
+			width: 100%; 
+			height: 100%;
+		}
+	}
+	.comment-content {
+		padding: 8*@xem;
+		display: table-cell;
+		vertical-align: top;
+		position: relative;
+	}
+	.meme-comment-info {
+		position: absolute;
+		bottom: 8*@xem;
+		padding-right: 8*@xem;
+		width: 100%;
+		line-height: 1.5;
+	}
+	.multiple-line-ellipsis {
+		word-wrap: break-word;
+		word-break: break-all;
+		display: -webkit-box;
+	    -webkit-line-clamp: 4;
+	    -webkit-box-orient: vertical;
+	    overflow: hidden;
+	}
+	.text-ellipsis {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.clearfix:before,.clearfix:after {
+	    display: table;
+	    content: " ";
+	}
+	.clearfix:after {
+		clear: both;
+	}
+}

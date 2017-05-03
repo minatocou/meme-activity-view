@@ -1,0 +1,28 @@
+{{#if data.list}}
+<div class="newcomer">
+    <ul>
+        {{#each data.list}}
+        <li class="product-detail " data-id={{productId}}>
+            <a href="{{#mlink productId}}{{/mlink}}"
+            data-id={{productId}}>
+                <div class="product-img">
+                    <img data-echo={{imgUrl}} alt="">
+                </div>
+                <div class="product-show">
+                    <div class="ov2">
+                        {{brandName}}{{name}}
+                    </div>
+                    <img class="n-tip" src="/activity/img/static/img/newcomer-tip.png">
+                    <div class="price-box">
+                        <div class="current-price">
+                            ￥{{#ifCond newcomerPrice ../isNewcomer newcomerPrice price}}{{/ifCond}}
+                        </div>
+                        <div class="original-price" >￥{{toFloat originPrice}}</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}

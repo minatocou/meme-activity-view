@@ -1,0 +1,20 @@
+{{#if liveLink}}
+<div class="live-video">
+    <video x5-video-player-type="h5" x5-video-player-fullscreen="true"
+           id="liveVideo" loop="loop" width="100%" preload="auto" poster="" webkit-playsinline="true" playsinline="true"
+           x-webkit-airplay="true"
+           src="{{liveLink}}">
+    </video>
+    <div class="videobg" style="background-image:url('{{liveBg}}')">
+    </div>
+    <div class="pause" style="display: block;">
+        <div class="pause-wrap">
+            <figure>
+                <img src="/activity/img/pause.png" alt="">
+            </figure>
+        </div>
+    </div>
+
+
+</div>
+{{/if}}

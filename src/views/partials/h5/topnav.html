@@ -1,0 +1,25 @@
+<div class="outer-wrap top-nav">
+    <div id="nav-wrap" style="z-index: 999999">
+        <div id="newWrap">
+            <div id="navOuter" class="nav-outer">
+                <div id="navInner" class="nav-inner">
+                    {{#each tabInfo}}
+                    <a class="nav-item" href="javascript:void(0)" data-anchor={{anchor}} data-index={{@index}}>{{name}}</a>
+                    {{/each}}
+                    <span class="nav-bottom-line" ></span>
+                </div>
+            </div>
+        </div>
+        <div class="stab-more">
+            <i></i>
+        </div>
+        <div class="stab-pop" >
+            <ul id="topNavUl">
+                {{#each tabInfo}}
+                <li data-anchor={{anchor}} data-index={{@index}}>{{name}}</li>
+                {{/each}}
+            </ul>
+            <div id="noMove" class="no-move"></div>
+        </div>
+    </div>
+</div>

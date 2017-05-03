@@ -1,0 +1,54 @@
+<div class="list cat" data-fromtime="{{groupImgFromTime}}" data-totime="{{groupImgToTime}}">
+    <ul data-from="{{catFrom}}" data-to="{{catTo}}" class="cat-ul">
+        {{#if isFriday}}
+            {{> h5/cat/friday}}
+        {{else}}
+            {{#if groupImg}}
+                <li class="groupImg col-{{column}}">
+                    <a class="groupImg-link" style="display: none;" href="{{#if groupImgUrl}}{{groupImgUrl}}{{else}}javascript:void(0);{{/if}}"><img src="/activity/common/img/default.png" data-echo="{{groupImg}}"></a>
+                </li>
+            {{/if}}
+
+            {{#if proNum}}
+                {{#each data.product}}
+                    {{#lt @index ../proNum}}
+                    <li class="col-{{../../column}}">
+                        <div class="product"  data-id="{{productId}}">
+                            <div class="pro_img">
+                                <a href="{{#mlink productId}}{{/mlink}}"><img data-echo="{{#imgCat ../../column imgPc img_400}}{{/imgCat}}" src="/activity/common/img/default.png"></a>
+
+                            </div>
+                            <div class="pro_info">
+                                <p class="ov2"><a href="{{#mlink productId}}{{/mlink}}">[{{brand}}]{{name}}</a></p>
+                                <div class="pro-shop">
+                                    <div class="price">美美价:<em>{{price}}</em><br><del>原价:{{originPrice}}</del></div>
+                                    <a href="{{#mlink productId}}{{/mlink}}">GO></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {{/lt}}
+                {{/each}}
+            {{else}}
+                {{#each data.product}}
+                <li class="col-{{../column}}">
+                    <div class="product"  data-id="{{productId}}">
+                        <div class="pro_img">
+                            <a href="{{#mlink productId}}{{/mlink}}"><img data-echo="{{#imgCat ../../column imgPc img_400}}{{/imgCat}}" src="/activity/common/img/default.png"></a>
+                        </div>
+                        <div class="pro_info">
+                            <p class="ov2"><a href="{{#mlink productId}}{{/mlink}}">[{{brand}}]{{name}}</a></p>
+                            <div class="pro-shop">
+                                <div class="price">美美价:<em>{{price}}</em><br><del>原价:{{originPrice}}</del></div>
+                                <a href="{{#mlink productId}}{{/mlink}}">GO></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            {{/if}}
+        {{/if}}
+
+
+    </ul>
+</div>

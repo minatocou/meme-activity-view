@@ -1,0 +1,181 @@
+@font-family: Helvetica Neue, Helvetica, Tahoma, Microsoft YaHei, STHeiti, Arial, Helvetica, sans-serif;
+@xem: 0.0625rem;
+html {
+    font: 14px @font-family;
+    line-height: normal;
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font: 16px @font-family;
+
+    }
+}
+
+@media screen and (min-width: 414px) {
+    html {
+        font: 17.6px @font-family;
+    }
+}
+@-webkit-keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to 	{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes headline_appear_animation{
+    from{
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    to 	{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes contentappear{
+    from {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        -webkit-transform:  scale(0.5);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to 	{
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes headline_appear_animation{
+    from{
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    to 	{
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes contentappear{
+    from {
+        -moz-transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        -moz-transform:  scale(0.5);
+        opacity: 0;
+    }
+    to {
+        -moz-transform: scale(1);
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*################ Sliding and appearing animation for the 404 page. Works in webkit browsers and mozilla firefox.*/
+
+a:active{
+    position: relative;
+    top: 1px;
+}
+
+html{
+    width:100%;
+    height:100%;
+    background: url("../../img/error_background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body{
+    font-family: 'Helvetica Neue';
+    width: auto;
+    margin: 0 auto 50*@xem auto;
+}
+
+.error-container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-60%);
+}
+p.error {
+    color: #000;
+    text-shadow: #fff 0 1px 0;
+    text-align:center;
+    font:900 8em helvetica neue;
+    -webkit-animation: 2s headline_appear_animation;
+    -moz-animation: 2s headline_appear_animation;
+    margin-bottom:10*@xem;
+}
+
+.content {
+    margin: auto;
+    padding: 15*@xem 20*@xem 20*@xem 20*@xem;
+    width: 285*@xem;
+
+    color: #fff;
+    -webkit-animation: 2s contentappear;
+    -moz-animation: 2s contentappear;
+    background-image: -moz-linear-gradient(top, rgba(85, 85, 85, 0.7), rgba(0,0,0, 1));
+    background-image: -o-linear-gradient(top, rgba(85, 85, 85, 0.7), rgba(0,0,0, 1));
+    background-image: -webkit-linear-gradient(top, rgba(85, 85, 85, 0.7), rgba(0,0,0,1));
+    background-image: linear-gradient(top, rgba(85, 85, 85, 0.7), rgba(0,0,0, 1));
+    border: 1px solid #000;
+    box-shadow: inset 0px 1px rgba(255, 255, 255, 0.4),
+    0 3px 8px #000000;
+    border-radius: 3*@xem;
+
+    font-size: 8*@xem;
+    line-height: 16*@xem;
+    font-weight: 300;
+    text-shadow: #000 0 1px 0;
+}
+
+.content h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 10*@xem;
+}
+
+p.links {
+    margin: 12*@xem 0 0 0;
+    text-align: center;
+}
+
+p.links a {
+    color: #fff;
+    margin-left: 8*@xem;
+    margin-right: 8*@xem;
+}
+
+p.links a:hover {
+    text-decoration: none;
+    text-shadow: #fff 0 0 5px;
+    -webkit-transition: all ease-in 0.3s;
+    -moz-transition: all ease-in 0.3s;
+}

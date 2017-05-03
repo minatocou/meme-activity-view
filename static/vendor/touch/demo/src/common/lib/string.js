@@ -1,0 +1,1 @@
+define(function(){var e={};return e.toPascal=function(t){return t?t.charAt(0).toUpperCase()+e.toCamel(t.slice(1)):""},e.toCamel=function(e){return e?e.replace(/-([a-z])/g,function(e){return e.toUpperCase()}):""},e});

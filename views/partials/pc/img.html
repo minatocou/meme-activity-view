@@ -1,0 +1,9 @@
+<div class="img-con">
+    <a class="img-link" href="{{#if imgUrl}}{{imgUrl}}{{else}}javascript:void(0);{{/if}}"><img data-echo="{{imgSrc}}" src="/activity/common/img/default.png" style="padding:{{#if padding}}0 {{padding}}{{else}}0{{/if}}">
+        {{#if links}}
+        {{#each links}}
+        <a class="map-link" style="left:{{css.left}};top:{{css.top}};width:{{css.width}};height:{{css.height}};position:{{css.position}};z-index:{{css.zIndex}};" href="{{#if url}}{{url}}{{else}}javascript:void(0);{{/if}}" alt=""></a>
+        {{/each}}
+        {{/if}}
+    </a>
+</div>

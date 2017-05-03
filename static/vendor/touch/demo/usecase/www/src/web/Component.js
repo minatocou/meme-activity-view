@@ -1,0 +1,1 @@
+define(function(t){function o(){i.apply(this,arguments)}var n=(t("./blend"),t("./lib")),i=t("./Control");return o.prototype.type="layout",o.prototype.pos={},o.prototype.updatePosition=function(){this.nativeObj.updatePosition()},n.inherits(o,i),o});

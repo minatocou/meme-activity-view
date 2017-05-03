@@ -1,0 +1,1 @@
+define(function(t){var n=t("../blend"),i=t("../lib"),o=t("../Dialog"),e=function(t,i,e,l){return o.call(this,{content:t,title:i,buttons:[{text:n.configs.dialogBtnCancel,onclick:l},{text:n.configs.dialogBtnOK,bold:!0,onclick:e}]}),this};return i.inherits(e,o),e.prototype.title=n.configs.dialogTitle,e.prototype.content="",e});

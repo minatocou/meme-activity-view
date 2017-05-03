@@ -1,0 +1,42 @@
+.newcomercoupon {
+  padding: 0.9375rem;
+}
+.newcomercoupon ul {
+  font-size: 0;
+}
+.newcomercoupon ul li {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.875rem;
+  position: relative;
+}
+.newcomercoupon ul li img {
+  width: 100%;
+  vertical-align: top;
+}
+.newcomercoupon ul li.over {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+.newcomercoupon ul li.over:after {
+  content: "";
+  background: url("../../../img/over.png") no-repeat right bottom;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  background-size: contain;
+}
+.newcomercoupon .getCouponBtn {
+  width: 100%;
+  padding: 0.75rem 0;
+  background: #ff5073;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.25rem;
+}
+.newcomercoupon .getCouponBtn.over {
+  background: #ccc;
+}

@@ -1,0 +1,12 @@
+{{#if couponInfo}}
+<div class="newcomercoupon" {{#if bgcolor}} style="background: {{bgcolor}}" {{/if}}>
+    <ul>
+        {{#each couponInfo}}
+        <li>
+            <img src="{{ruleImg}}">
+        </li>
+        {{/each}}
+    </ul>
+    <div class="getCouponBtn" data-login="1" data-fieldType="newcomercoupon" data-ruleids="{{ruleId}}">一键领取</div>
+</div>
+{{/if}}

@@ -1,0 +1,51 @@
+{{#if imgRadios}}
+    {{#compare imgRadios '==' "1"}}
+    <div class="img-con topfix" data-src="{{imgSrc}}">
+        <a class="img-link" data-loginMsg="{{loginMsg}}" data-regMsg="{{regMsg}}" data-login="{{isLogin}}" data-href="{{imgUrl}}"><img src="{{imgSrc}}">
+            {{#if links}}
+            {{#each links}}
+            <a class="map-link top-anchor" data-loginMsg="{{../loginMsg}}" data-regMsg="{{../regMsg}}" data-anchor="{{url}}" style="left:{{css.left}};top:{{css.top}};width:{{css.width}};height:{{css.height}};position:{{css.position}};z-index:{{css.zIndex}};" alt=""></a>
+            {{/each}}
+            {{/if}}
+            {{#if linksPopup}}
+            {{#each linksPopup}}
+            <span class="map-link top-anchor link-popup" data-type="{{type}}" data-img="{{img}}" data-regMsg="{{../regMsg}}" data-url="{{url}}" style="left:{{css.left}};top:{{css.top}};width:{{css.width}};height:{{css.height}};position:{{css.position}};z-index:{{css.zIndex}};" alt=""></span>
+            {{/each}}
+            {{/if}}
+        </a>
+    </div>
+    <img src="{{imgSrc}}" alt="" class="vhidden hide">
+    {{/compare}}
+    {{#compare imgRadios '==' "2"}}
+    <div class="img-con bottomfix fixed" data-src="{{imgSrc}}">
+        <a class="img-link " data-loginMsg="{{loginMsg}}" data-regMsg="{{regMsg}}" data-login="{{isLogin}}" data-href="{{imgUrl}}"><img src="{{imgSrc}}">
+            {{#if links}}
+            {{#each links}}
+            <a class="map-link trans" data-loginMsg="{{../loginMsg}}" data-regMsg="{{../regMsg}}" data-login="{{../isLogin}}" style="left:{{css.left}};top:{{css.top}};width:{{css.width}};height:{{css.height}};position:{{css.position}};z-index:{{css.zIndex}};" data-href="{{url}}" alt=""></a>
+            {{/each}}
+            {{/if}}
+            {{#if linksPopup}}
+            {{#each linksPopup}}
+            <span class="map-link trans link-popup" data-img="{{img}}"  data-type="{{type}}"  data-regMsg="{{../regMsg}}" data-url="{{url}}" style="left:{{css.left}};top:{{css.top}};width:{{css.width}};height:{{css.height}};position:{{css.position}};z-index:{{css.zIndex}};" alt=""></span>
+            {{/each}}
+            {{/if}}
+        </a>
+    </div>
+
+    {{/compare}}
+{{else}}
+    <div class="img-con" data-fromtime="{{imgFromTime}}" data-totime="{{imgToTime}}">
+        <a class="img-link" data-loginMsg="{{loginMsg}}" data-regMsg="{{regMsg}}" data-login="{{isLogin}}" data-href="{{imgUrl}}"><img data-echo="{{imgSrc}}" src="/activity/common/img/default.png">
+            {{#if links}}
+            {{#each links}}
+            <a class="map-link trans" data-loginMsg="{{../loginMsg}}" data-regMsg="{{../regMsg}}" data-login="{{../isLogin}}" style="left:{{css.left}};top:{{css.top}};width:{{css.width}};height:{{css.height}};position:{{css.position}};z-index:{{css.zIndex}};" data-href="{{url}}" alt=""></a>
+            {{/each}}
+            {{/if}}
+            {{#if linksPopup}}
+            {{#each linksPopup}}
+            <span class="map-link trans link-popup" data-img="{{img}}"  data-type="{{type}}"  data-regMsg="{{../regMsg}}" data-url="{{url}}" style="left:{{css.left}};top:{{css.top}};width:{{css.width}};height:{{css.height}};position:{{css.position}};z-index:{{css.zIndex}};" alt=""></span>
+            {{/each}}
+            {{/if}}
+        </a>
+    </div>
+{{/if}}

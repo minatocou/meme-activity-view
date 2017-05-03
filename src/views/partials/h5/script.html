@@ -1,0 +1,51 @@
+<script>
+    var status = "{{config.status}}";
+
+    function paramOfUrl(url) {
+        url = url || window.location.href;
+        var paramSuit = url.substring(url.indexOf('?') + 1).split('&');
+        var paramObj = {};
+        for (var i = 0; i < paramSuit.length; i++) {
+            var param = paramSuit[i].split('=');
+            if (param.length == 2) {
+                var key = decodeURIComponent(param[0]);
+                var val = decodeURIComponent(param[1]);
+                if (paramObj.hasOwnProperty(key)) {
+                    if (!(paramObj[key] instanceof Array)) {
+                        paramObj[key] = [paramObj[key]]
+                    }
+                    paramObj[key].push( val);
+                } else {
+                    paramObj[key] = val;
+                }
+            }
+        }
+        return paramObj;
+    }
+    var preview = parseInt(paramOfUrl(window.location.href).preview || 0);
+
+    if( !preview && !parseInt(status)  ){
+        window.location="{{config.serverConfig.mproduct}}";
+    }
+    var _maq = _maq || [] ;
+
+    var shareUrl;
+    var sharelink = '{{#if config.root.shareUrl}}{{config.root.shareDesc}}{{else}}{{/if}}';
+    if(sharelink){
+        shareUrl = sharelink
+    }else{
+        shareUrl = location.href
+    }
+    var share_obj={
+        title: '{{#if config.root.shareTitle}}{{config.root.shareTitle}}{{else}}没有title{{/if}}',
+        text: '{{#if config.root.shareDesc}}{{config.root.shareDesc}}{{else}}没有text{{/if}}',
+        url: shareUrl,
+        image: '{{#if config.root.shareImg}}{{config.root.shareImg}}{{else}}http://avatar.cn.memebox.com/avatar/2016/10/24/c92b75dc-4afa-47d1-b58d-ceff7d47564d.png{{/if}}'
+    }
+    if(share_obj.title==='没有title'){
+        share_obj.title = document.title;
+    }
+    if(share_obj.text==='没有text'){
+        share_obj.text = '全球知名美妆平台入驻中国啦！';
+    }
+</script>

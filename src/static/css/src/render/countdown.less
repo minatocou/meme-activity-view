@@ -1,0 +1,138 @@
+.countdown{
+  display: none;
+}
+.active-started.countdown , .active-over.countdown , .active-not.countdown{
+  display: block;
+}
+.active-started .started {
+  display: block
+}
+
+.active-started .over, .active-started .not {
+  display: none
+}
+
+.active-started .active-not-text {
+  display: none
+}
+
+.active-not .not {
+  display: block
+}
+
+.active-not .started, .active-not .over {
+  display: none
+}
+
+.active-not .active-started-text {
+  display: none
+}
+
+.active-over .over {
+  display: block
+}
+
+.active-over .started, .active-over .not {
+  display: none
+}
+
+.active-over .time-box {
+  display: none
+}
+
+.active-not-text, .active-started-text {
+  color: #fff91a
+}
+
+.time-box {
+  position: relative;
+  padding: .9375rem 0;
+}
+
+.time-box p {
+  color: #fff;
+  font-size: .9375rem;
+  margin-bottom: .625rem
+}
+
+.left-time {
+  color: #fff;
+  font-size: .6875rem
+}
+
+.card {
+  position: relative;
+  width: 1.5625rem;
+  height: 2.5rem;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.card span {
+  position: relative;
+  font-size: 1.4375rem;
+  z-index: 3;
+  line-height: 2.5rem;
+  color: #fff
+}
+
+.card:before, .card:after {
+  position: absolute;
+  left: 0;
+  content: "";
+  background-color: #00173c;
+  height: 48%;
+  width: 100%
+}
+
+.card:before {
+  top: 0;
+  border-top-left-radius: .3125rem;
+  border-top-right-radius: .3125rem
+}
+
+.card:after {
+  bottom: 0;
+  border-bottom-left-radius: .3125rem;
+  border-bottom-right-radius: .3125rem
+}
+
+.day, .hour, .minute, .second {
+  display: inline-block
+}
+
+.second .card span {
+  color: #fff91a
+}
+
+.color-b {
+  color: #bbb
+}
+
+.color-m {
+  color: #ff5073
+}
+
+.font-19 {
+  font-size: .8rem
+}
+
+.font-12 {
+  font-size: .75rem
+}
+
+.discount {
+  background: #ffe3f2;
+  font-size: .75rem;
+  color: #ff75c0;
+  padding: .125rem .3125rem;
+  border-radius: .125rem;
+  margin-bottom: .3125rem;
+  display: inline-block
+}
+
+//.active {
+//  width: 2.8125rem;
+//  height: .875rem;
+//  margin-bottom: .3125rem
+//}

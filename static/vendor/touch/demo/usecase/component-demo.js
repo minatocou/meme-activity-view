@@ -1,0 +1,1 @@
+$(function(){require(["../src/web/blend","../src/web/dialog/alert","../src/web/slider"],function(n,e,i){var l=$("#myslider").find(".slide-position li");window.s=new i({main:$("#myslider")[0],auto:3e3,continuous:!0,callback:function(n){for(var e=l.length;e--;)l[e].className=" ";l[n].className="on"}})},null,!0)});

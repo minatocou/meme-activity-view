@@ -1,0 +1,51 @@
+{{#if data.list}}
+<div class="newcomercomment">
+    <ul>
+        {{#each data.list}}
+        <li class="product-detail " data-id={{productId}}>
+            <a class="pa" href="{{#mlink productId}}{{/mlink}}"
+            data-id={{productId}}>
+                <div class="product-img">
+                    <img data-echo={{imgUrl}} alt="">
+                </div>
+                <div class="product-show">
+                    <div class="ov2">
+                        {{brandName}}{{name}}
+                    </div>
+                    <img class="n-tip" src="/activity/img/static/img/newcomer-tip.png">
+                    <div class="price-box">
+                        <span class="current-price">￥{{#ifCond newcomerPrice ../isNewcomer newcomerPrice price}}{{/ifCond}}</span>
+                        <s class="original-price" >￥{{toFloat originPrice}}</s>
+                    </div>
+                    <div class="see">去看看</div>
+                </div>
+            
+            </a>
+            {{#if comment.excellentList}}
+
+                <div class="comment-list">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            {{#each comment.excellentList}}
+                            <a href="{{#mlinkToComment ../productId reviewId}}{{/mlinkToComment}}" data-id={{../productId}} class="swiper-slide comment-item">
+                                <div class="ui">
+                                    <img class="avatar" {{#if avatar}} data-echo="{{avatar}}" {{else}} src="/activity/img/static/img/user-avatar.jpg" {{/if}} alt="">
+                                    <span class="userName">{{userName}}</span>
+                                    <div class="star-{{star}}"></div>
+                                </div>
+                                <div class="content">
+                                    {{text}}
+                                </div>
+                            </a>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+
+            {{/if}}
+            
+        </li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}

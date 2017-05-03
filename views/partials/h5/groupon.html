@@ -1,0 +1,36 @@
+{{#if data.product }}
+<div class="groupon">
+    <h3>{{data.title}}</h3>
+    <ul>
+        {{#each data.product}}
+        <li class="product-detail grouponPro" data-id={{productId}}>
+            <a href="{{#mlink productId}}{{/mlink}}"
+            data-id={{productId}}>
+                <div class="product-img">
+                    <img data-echo={{imgUrl}} alt="">
+                </div>
+                <div class="product-show">
+                    <div class="ov2">
+                        <span class="product-label">{{#is grouponType '1'}}拼团{{else}}邀新团{{/is}}</span>
+                        {{brandName}}{{name}}
+                    </div>
+                    {{#if buyTimes}}
+                    <span class="in-num">已有{{buyTimes}}人参团</span>
+                    {{else}}
+                    {{/if}}
+                    <div class="price-box">
+                        <div class="current-price">
+                            <span>{{../data.activityNum}}人拼团价</span>
+                            ￥{{#if grouponPrice}}{{toFloat grouponPrice}}{{else}}{{toFloat price}}{{/if}}
+                        </div>
+                        <div class="original-price" >单独购买￥{{toFloat price}}</div>
+                    </div>
+                    <div class="groupon-label openGrouponBtn">立即开团</div>
+                </div>
+
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}
